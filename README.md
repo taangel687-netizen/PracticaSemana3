@@ -1,41 +1,71 @@
-# PracticaSemana3
+# Practica Calificada 2 - Desarrollo de Aplicaciones Web
 
-Práctica Calificada 2 — Desarrollo de Aplicaciones Web
-Equipo
-Líder: TOCAS ANGLAS ANGEL
-Integrante 2: RAMOS TACZA CAMILDA
-Integrante 3: OSORIO MALLQUI JOSE
-Integrante 4: VALENCIA BERNAOLA ANDRÉS
+Proyecto de desarrollo web enfocado en la maquetacion responsive, componentes dinamicos y animaciones CSS utilizando HTML5 y Tailwind CSS.
 
-Backlog utilizado
+---
 
-# Historia de usuario Página Estado
+## Equipo de Trabajo
 
-1 Como usuario quiero ver una bandeja de mensajes estilo A para revisar mis correos rápidamente page01.html (lista a) Hecho
-2 Como usuario quiero ver una bandeja de mensajes estilo B con hora y favoritos page01.html (lista b) Hecho
-3 Como usuario quiero explorar las 10 playas más importantes del Perú en tarjetas page02.html (cards a) Hecho
-4 Como usuario quiero ver el clima de las 10 ciudades más importantes del Perú page02.html (cards b) Hecho
-5 Como usuario quiero navegar una tienda de plantas con productos recién llegados page03.html Hecho
-6 Como usuario quiero una página principal con accesos animados a las demás páginas index.html Hecho
-Funcionalidades por página
-index.html
-3 cards animados que enlazan a `page01.html`, `page02.html` y `page03.html`.
-Animación de giro 180° combinando eje horizontal y vertical al pasar el mouse (`rotate3d(1,1,0,180deg)`).
-page01.html
-Grid de 2 columnas / 1 fila.
-Columna A: lista de inbox estilo Material (header teal, avatares, asunto en negrita).
-Columna B: lista de inbox con hora, estrella de favorito y check de seleccionado.
-Responsivo: 100% de ancho `<700px`, 50% entre `701px-1399px`, 60% `>1400px`.
-page02.html
-Grid de 1 fila / 2 columnas.
-Columna A: 10 cards de playas del Perú (200x120 imagen), flexbox con separación de 10px, hover gris en botones SHARE/EXPLORE.
-Columna B: 10 cards de ciudades del Perú tipo "reporte del clima" (250x200), flexbox con separación de 5px, hover gris en botón FULL REPORT.
-page03.html
-Tienda de plantas: barra de promoción, nav, hero "Plantas", sección "Recién llegados" con 4 productos.
-Hover en imágenes reduce opacidad (efecto +15%).
-Responsivo con flexbox + media queries: pequeño `<480px` (1 columna), mediano `<900px` (2 columnas), grande `<1200px` (3 columnas), extra `>1200px` (4 columnas).
-Footer con 5 columnas de información.
-Tecnologías
-HTML5
-Tailwind CSS (CDN)
-CSS personalizado para media queries específicas y animaciones 3D
+- Lider de Proyecto: TOCAS ANGLAS ANGEL
+- Integrante 2: RAMOS TACZA CAMILDA
+- Integrante 3: OSORIO MALLQUI JOSE
+- Integrante 4: VALENCIA BERNAOLA ANDRES
+
+---
+
+## Backlog de Historias de Usuario
+
+| ID   | Historia de Usuario                                                                           | Archivo     | Estado     |
+| ---- | --------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| HU01 | Como usuario quiero ver una bandeja de mensajes estilo A para revisar mis correos rapidamente | page01.html | Completado |
+| HU02 | Como usuario quiero ver una bandeja de mensajes estilo B con hora y favoritos                 | page01.html | Completado |
+| HU03 | Como usuario quiero explorar las 10 playas mas importantes del Peru en tarjetas               | page02.html | Completado |
+| HU04 | Como usuario quiero ver el clima de las 10 ciudades mas importantes del Peru                  | page02.html | Completado |
+| HU05 | Como usuario quiero navegar una tienda de plantas con productos recien llegados               | page03.html | Completado |
+| HU06 | Como usuario quiero una pagina principal con accesos animados a las demas paginas             | index.html  | Completado |
+
+---
+
+## Detalle de Implementacion por Pagina
+
+### index.html
+
+- Menu principal compuesto por 3 tarjetas animadas que dirigen a page01.html, page02.html y page03.html.
+- Efecto hover con rotacion en 3D (180 grados combinando ejes horizontal y vertical).
+- Orientacion de texto corregida en la cara posterior para lectura clara al girar.
+
+### page01.html
+
+- Layout en Grid estructurado en 1 fila y 2 columnas.
+- Columna izquierda: Lista de bandeja de entrada estilo Material Design (encabezado teal, avatares y texto resaltado).
+- Columna derecha: Lista de bandeja de entrada con marcas de tiempo, estados y seleccionables.
+- Adaptabilidad responsiva:
+  - Pantallas menores a 700px: 100% de ancho.
+  - Pantallas entre 701px y 1399px: 50% de ancho.
+  - Pantallas mayores a 1400px: 60% de ancho.
+
+### page02.html
+
+- Layout en Grid compuesto por 1 fila y 2 columnas.
+- Columna A: 10 tarjetas de playas del Peru (dimensiones de imagen 200px x 120px) distribuidas en Flexbox con espacio de 10px y estados hover en botones de accion (SHARE / EXPLORE).
+- Columna B: 10 tarjetas de reporte de clima para ciudades del Peru (dimensiones 250px x 200px) distribuidas en Flexbox con espacio de 5px y estado hover en boton FULL REPORT.
+
+### page03.html
+
+- Maquetacion de tienda virtual con barra superior de anuncios, cabecera de navegacion, banner principal y catalogo "Recien llegados".
+- Efecto hover con transicion de opacidad (+15%) en las imagenes de producto.
+- Comportamiento responsivo adaptable via Flexbox:
+  - Menor a 480px: 1 columna.
+  - Menor a 900px: 2 columnas.
+  - Menor a 1200px: 3 columnas.
+  - Mayor a 1200px: 4 columnas.
+- Pie de pagina estructurado en 5 columnas informativas.
+
+---
+
+## Tecnologias Utilizadas
+
+- HTML5
+- Tailwind CSS
+- CSS Custom (Media Queries y transformaciones 3D)
+- Git / GitHub
