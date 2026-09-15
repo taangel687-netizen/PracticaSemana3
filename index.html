@@ -79,8 +79,211 @@
       </a>
     </div>
 
-    <p class="text-neutral-400 text-sm">
-      Página Principal - EQUIPO : TOCAS - RAMOS - OSORIO - VALENCIA
-    </p>
+    <p class="text-neutral-400 text-sm">Página Principal</p>
+
+    <!-- Componente: Order stepper -->
+    <div class="w-full max-w-3xl px-4">
+      <div class="bg-neutral-900 rounded-xl shadow-2xl overflow-hidden">
+        <!-- Barra superior con iconos -->
+        <div
+          class="bg-neutral-800 flex items-center justify-end gap-4 px-5 py-3"
+        >
+          <svg
+            class="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+          <svg
+            class="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 21l6.5-1.5L21 8a2.5 2.5 0 00-3.5-3.5L6 15.5 4.5 21z"
+            />
+          </svg>
+          <svg
+            class="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V5a2 2 0 012-2h9a2 2 0 012 2v9a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-2M8 7h6a2 2 0 012 2v6"
+            />
+          </svg>
+          <svg
+            class="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 20l4-16m2 4l4 4-4 4M8 8l-4 4 4 4"
+            />
+          </svg>
+        </div>
+
+        <div class="px-6 py-6">
+          <!-- Pasos -->
+          <div
+            id="steps"
+            class="flex items-center justify-between mb-8 flex-wrap gap-4"
+          >
+            <div class="step flex items-center gap-2" data-step="1">
+              <span
+                class="step-circle w-6 h-6 rounded-full bg-white text-neutral-900 flex items-center justify-center text-xs font-bold"
+                >1</span
+              >
+              <span class="step-label text-white text-sm">Review Order</span>
+            </div>
+            <div class="step flex items-center gap-2" data-step="2">
+              <span
+                class="step-circle w-6 h-6 rounded-full bg-neutral-700 text-gray-300 flex items-center justify-center text-xs font-bold"
+                >2</span
+              >
+              <span class="step-label text-gray-500 text-sm"
+                >Select Shipping</span
+              >
+            </div>
+            <div class="step flex items-center gap-2" data-step="3">
+              <span
+                class="step-circle w-6 h-6 rounded-full bg-neutral-700 text-gray-300 flex items-center justify-center text-xs font-bold"
+                >3</span
+              >
+              <span class="step-label text-gray-500 text-sm">Submit</span>
+            </div>
+          </div>
+
+          <h3 class="text-white font-bold text-lg mb-4">Order</h3>
+
+          <div class="border border-neutral-700 rounded-lg overflow-hidden">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-neutral-700">
+                  <th class="text-left text-gray-400 font-normal px-4 py-3">
+                    Description
+                  </th>
+                  <th class="text-right text-gray-400 font-normal px-4 py-3">
+                    Quantity
+                  </th>
+                  <th class="text-right text-gray-400 font-normal px-4 py-3">
+                    Price
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-white">
+                <tr class="border-b border-neutral-700">
+                  <td class="px-4 py-3">Product 1</td>
+                  <td class="text-right px-4 py-3">2</td>
+                  <td class="text-right px-4 py-3">20</td>
+                </tr>
+                <tr class="border-b border-neutral-700">
+                  <td class="px-4 py-3">Product 2</td>
+                  <td class="text-right px-4 py-3">10</td>
+                  <td class="text-right px-4 py-3">150</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-bold">Total</td>
+                  <td class="px-4 py-3"></td>
+                  <td class="text-right px-4 py-3 font-bold">$170</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="flex items-center justify-between mt-6">
+            <button
+              id="prevBtn"
+              class="text-gray-600 text-sm font-semibold tracking-wide cursor-not-allowed"
+              disabled
+            >
+              PREVIOUS
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-neutral-100 text-neutral-900 text-sm font-semibold tracking-wide px-5 py-2 rounded"
+            >
+              NEXT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let current = 1;
+      const steps = document.querySelectorAll("#steps .step");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function render() {
+        steps.forEach((s) => {
+          const n = parseInt(s.dataset.step);
+          const circle = s.querySelector(".step-circle");
+          const label = s.querySelector(".step-label");
+          if (n === current) {
+            circle.className =
+              "step-circle w-6 h-6 rounded-full bg-white text-neutral-900 flex items-center justify-center text-xs font-bold";
+            label.className = "step-label text-white text-sm";
+          } else if (n < current) {
+            circle.className =
+              "step-circle w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs font-bold";
+            label.className = "step-label text-gray-400 text-sm";
+          } else {
+            circle.className =
+              "step-circle w-6 h-6 rounded-full bg-neutral-700 text-gray-300 flex items-center justify-center text-xs font-bold";
+            label.className = "step-label text-gray-500 text-sm";
+          }
+        });
+
+        if (current === 1) {
+          prevBtn.setAttribute("disabled", "true");
+          prevBtn.className =
+            "text-gray-600 text-sm font-semibold tracking-wide cursor-not-allowed";
+        } else {
+          prevBtn.removeAttribute("disabled");
+          prevBtn.className =
+            "text-gray-200 text-sm font-semibold tracking-wide hover:text-white";
+        }
+
+        nextBtn.textContent = current === 3 ? "SUBMIT" : "NEXT";
+      }
+
+      nextBtn.addEventListener("click", () => {
+        if (current < 3) {
+          current++;
+          render();
+        } else {
+          alert("¡Orden enviada!");
+        }
+      });
+      prevBtn.addEventListener("click", () => {
+        if (current > 1) {
+          current--;
+          render();
+        }
+      });
+
+      render();
+    </script>
   </body>
 </html>
