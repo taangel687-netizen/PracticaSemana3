@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 02 - Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+  <!-- Grid: 1 fila, 2 columnas -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- ============ COLUMNA A: cards de playas (200 x 120 imagen) ============ -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Top 10 playas del Perú</h2>
+      <!-- flexbox, separación 10px -->
+      <div class="flex flex-wrap gap-[10px]">
+
+        <!-- CARD (se repite 10 veces con distintos datos) -->
+        <!-- 1 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="data:image/jpeg;base64,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" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 1</p>
+            <p class="text-xs text-gray-300 mt-2">Máncora</p>
+            <p class="text-xs text-gray-400">Piura, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa2/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 2</p>
+            <p class="text-xs text-gray-300 mt-2">Punta Sal</p>
+            <p class="text-xs text-gray-400">Tumbes, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAt0EySmyN6oLoniZHZ4MsgJGbPDT6d1h0RI-CtbGjPw&s=10" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 3</p>
+            <p class="text-xs text-gray-300 mt-2">Paracas</p>
+            <p class="text-xs text-gray-400">Ica, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa4/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 4</p>
+            <p class="text-xs text-gray-300 mt-2">Zorritos</p>
+            <p class="text-xs text-gray-400">Tumbes, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa5/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 5</p>
+            <p class="text-xs text-gray-300 mt-2">Los Órganos</p>
+            <p class="text-xs text-gray-400">Piura, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa6/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 6</p>
+            <p class="text-xs text-gray-300 mt-2">Vichayito</p>
+            <p class="text-xs text-gray-400">Piura, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa7/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 7</p>
+            <p class="text-xs text-gray-300 mt-2">Cerro Azul</p>
+            <p class="text-xs text-gray-400">Lima, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa8/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 8</p>
+            <p class="text-xs text-gray-300 mt-2">La Mina</p>
+            <p class="text-xs text-gray-400">Ica, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa9/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 9</p>
+            <p class="text-xs text-gray-300 mt-2">Pimentel</p>
+            <p class="text-xs text-gray-400">Lambayeque, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <!-- 10 -->
+        <div class="w-[200px] bg-zinc-900 text-white rounded-md overflow-hidden shadow-lg">
+          <img src="https://picsum.photos/seed/playa10/200/120" alt="Playa" class="w-[200px] h-[120px] object-cover">
+          <div class="p-3">
+            <p class="font-bold text-sm">Number 10</p>
+            <p class="text-xs text-gray-300 mt-2">Huanchaco</p>
+            <p class="text-xs text-gray-400">La Libertad, Perú</p>
+            <div class="flex gap-4 mt-3 text-xs font-semibold">
+              <button class="text-orange-400 hover:text-gray-400 transition">SHARE</button>
+              <button class="text-orange-400 hover:text-gray-400 transition">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ COLUMNA B: cards de ciudades / clima (250 x 200) ============ -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Top 10 ciudades del Perú</h2>
+      <!-- flexbox, separación 5px -->
+      <div class="flex flex-wrap gap-[5px]">
+
+        <!-- CARD clima estilo Florida (se repite 10 veces) -->
+        <!-- 1 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Lima</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">18&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 22 km/h</span>
+            <span>&#9748; 60%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 2 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Arequipa</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">15&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 10 km/h</span>
+            <span>&#9748; 30%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 3 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Cusco</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">12&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 8 km/h</span>
+            <span>&#9748; 45%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 4 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Trujillo</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">20&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 15 km/h</span>
+            <span>&#9748; 55%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 5 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Chiclayo</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">21&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 18 km/h</span>
+            <span>&#9748; 50%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 6 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Piura</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">28&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 20 km/h</span>
+            <span>&#9748; 35%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 7 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Iquitos</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">31&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 12 km/h</span>
+            <span>&#9748; 80%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 8 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Huancayo</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">10&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 9 km/h</span>
+            <span>&#9748; 40%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 9 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Tacna</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">17&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 14 km/h</span>
+            <span>&#9748; 25%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+        <!-- 10 -->
+        <div class="w-[250px] h-[200px] bg-zinc-900 text-white rounded-md p-4 flex flex-col justify-between shadow-lg">
+          <div>
+            <p class="font-bold text-rose-400">Puno</p>
+            <p class="text-xs flex items-center gap-1 text-rose-300">&#9650; Extreme Weather Alert</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-light">8&deg;C</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"/></svg>
+          </div>
+          <div class="flex items-center justify-between text-xs text-gray-300">
+            <span>&#8644; 16 km/h</span>
+            <span>&#9748; 50%</span>
+          </div>
+          <button class="text-xs font-semibold text-gray-200 hover:text-gray-400 transition text-left">FULL REPORT</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
