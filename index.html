@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Giro de 180° sobre ambos ejes (horizontal y vertical) al pasar el mouse */
+      .flip-card {
+        perspective: 1000px;
+      }
+      .flip-inner {
+        transition: transform 0.7s;
+        transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-inner {
+        transform: rotate3d(1, 1, 0, 180deg);
+      }
+      .flip-face {
+        backface-visibility: hidden;
+      }
+      .flip-back {
+        transform: rotate3d(1, 1, 0, 180deg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-neutral-50 min-h-screen flex flex-col items-center justify-center gap-12 py-20"
+  >
+    <h1 class="text-3xl font-semibold text-neutral-900">
+      Diseño web con 3 cards animados
+    </h1>
+
+    <div class="flex flex-wrap justify-center gap-8">
+      <a href="page01.html" class="flip-card w-52 h-52 block">
+        <div class="flip-inner relative w-full h-full">
+          <div
+            class="flip-face absolute inset-0 bg-sky-400 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-2xl font-bold">page1</span>
+          </div>
+          <div
+            class="flip-face flip-back absolute inset-0 bg-sky-600 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-lg">Ir a Page 01</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="page02.html" class="flip-card w-52 h-52 block">
+        <div class="flip-inner relative w-full h-full">
+          <div
+            class="flip-face absolute inset-0 bg-sky-400 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-2xl font-bold">page2</span>
+          </div>
+          <div
+            class="flip-face flip-back absolute inset-0 bg-sky-600 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-lg">Ir a Page 02</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="page03.html" class="flip-card w-52 h-52 block">
+        <div class="flip-inner relative w-full h-full">
+          <div
+            class="flip-face absolute inset-0 bg-sky-400 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-2xl font-bold">page3</span>
+          </div>
+          <div
+            class="flip-face flip-back absolute inset-0 bg-sky-600 rounded-2xl flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-lg">Ir a Page 03</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <p class="text-neutral-400 text-sm">Página Principal</p>
+  </body>
+</html>
